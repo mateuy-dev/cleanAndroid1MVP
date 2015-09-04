@@ -2,10 +2,10 @@ package com.mateuyabar.android.cleanapp.presentation.presenters;
 
 import com.mateuyabar.android.cleanapp.domain.models.Recipe;
 import com.mateuyabar.android.cleanapp.domain.usecases.RecipeUseCases;
-import com.mateuyabar.android.cleanbase.presentation.presenters.Presenter;
+import com.mateuyabar.android.cleanbase.presentation.presenters.BasePresenter;
 
 
-public class ShowRecipeDetailPresenter implements Presenter{
+public class ShowRecipeDetailPresenter extends BasePresenter{
     ViewRenderer view;
     int recipeId;
     RecipeUseCases recipeUseCases = new RecipeUseCases();
@@ -20,17 +20,6 @@ public class ShowRecipeDetailPresenter implements Presenter{
     private void loadRecipe() {
         Recipe recipe = recipeUseCases.getRecipe(recipeId);
         view.render(recipe);
-    }
-
-
-    @Override
-    public void resume() {}
-
-    @Override
-    public void pause() {}
-
-    @Override
-    public void destroy() {
     }
 
     public static interface ViewRenderer {

@@ -3,11 +3,11 @@ package com.mateuyabar.android.cleanapp.presentation.presenters;
 
 import com.mateuyabar.android.cleanapp.domain.models.Recipe;
 import com.mateuyabar.android.cleanapp.domain.usecases.RecipeUseCases;
-import com.mateuyabar.android.cleanbase.presentation.presenters.Presenter;
+import com.mateuyabar.android.cleanbase.presentation.presenters.BasePresenter;
 
 import java.util.List;
 
-public class RecipeListPresenter  implements Presenter{
+public class RecipeListPresenter  extends BasePresenter {
     ViewRenderer view;
     RecipeUseCases recipeUseCases = new RecipeUseCases();
 
@@ -23,15 +23,6 @@ public class RecipeListPresenter  implements Presenter{
     public void recipeClicked(Recipe recipe){
         view.render(recipe);
     }
-
-    @Override
-    public void resume() {}
-
-    @Override
-    public void pause() {}
-
-    @Override
-    public void destroy() {}
 
     public interface ViewRenderer{
         /**
