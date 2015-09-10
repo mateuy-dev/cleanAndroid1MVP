@@ -40,6 +40,11 @@ dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
     compile 'com.android.support:appcompat-v7:23.0.0'
     compile 'com.android.support:design:23.0.0'
+
+    compile 'io.reactivex:rxjava:1.0.0'
+    compile 'io.reactivex:rxandroid:0.24.0'
+
     compile 'com.jakewharton:butterknife:6.1.0'
+
     compile project(':cleanbase')
 }

@@ -5,17 +5,11 @@ package com.mateuyabar.android.cleanbase.presentation.presenters;
  */
 public class BasePresenter implements Presenter {
     @Override
-    public void resume() {
-
-    }
+    public void resume() {}
 
     @Override
-    public void pause() {
-
-    }
+    public void pause() {}
 
     @Override
-    public void destroy() {
-
-    }
+    public void destroy() {}
 }

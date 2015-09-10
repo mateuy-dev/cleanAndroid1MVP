@@ -20,7 +20,11 @@ public class RecipeListPresenter  extends BasePresenter {
         view.render(recipeUseCases.getRecipes());
     }
 
-    public void recipeClicked(Recipe recipe){
+    /**
+     * Called by the view. It displays the recipie given.
+     * @param recipe
+     */
+    public void displayRecipe(Recipe recipe){
         view.render(recipe);
     }
 

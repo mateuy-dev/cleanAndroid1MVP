@@ -49,7 +49,7 @@ public class ListRecipesFragment extends PresenterFragment implements RecipeList
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                presenter.recipeClicked(adapter.getItem(position));
+                presenter.displayRecipe(adapter.getItem(position));
             }
         });
 
